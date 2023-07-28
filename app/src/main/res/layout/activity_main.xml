@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <EditText
-        android:id="@+id/edt_upi_id"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_margin="10sp"
-        android:hint="Enter Upi ID"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/edt_amt"
+        android:layout_marginBottom="70sp"
+        android:layout_height="match_parent"/>
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_margin="10sp"
-        android:inputType="number"
-        android:hint="Enter Amount"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btn_generate"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="50sp"
-        android:layout_marginHorizontal="50sp"
-        android:text="Generate Qr Code"
-        android:layout_height="wrap_content"/>
-    <ImageView
-        android:id="@+id/qrCodeImageView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="16dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu" />
 
-
-</LinearLayout>
+</RelativeLayout>
