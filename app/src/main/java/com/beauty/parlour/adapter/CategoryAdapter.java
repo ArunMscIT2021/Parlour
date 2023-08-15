@@ -34,8 +34,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tvTitle.setText(categories.get(position).getTitle());
-       holder.tvDescription.setText(categories.get(position).getDescription());
+        holder.tvCategoryName.setText(categories.get(position).getTitle());
     }
 
     @Override
@@ -44,12 +43,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvTitle, tvDescription;
+        TextView tvCategoryName;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.tv_title);
-            tvDescription = itemView.findViewById(R.id.tv_description);
+            tvCategoryName = itemView.findViewById(R.id.tv_category_name);
 
 
         }

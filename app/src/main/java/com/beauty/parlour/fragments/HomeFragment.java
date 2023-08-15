@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,10 +39,14 @@ public class HomeFragment extends Fragment {
         activity=getActivity();
 
         recyclerView=root.findViewById(R.id.rv_category);
-        LinearLayoutManager layoutManager =new LinearLayoutManager(activity);
+        GridLayoutManager layoutManager =new GridLayoutManager(activity,2);
         recyclerView.setLayoutManager(layoutManager);
         categories.add(new Category("Massage","Spa Massage"));
         categories.add(new Category("HairCut","Staylish "));
+        categories.add(new Category("Threading","Eyebrows "));
+        categories.add(new Category("Facial","Goldenfacial "));
+        categories.add(new Category("Pedicure","Leg "));
+        categories.add(new Category("Mehendhi","Fullhand "));
         CategoryAdapter categoryAdapter=new CategoryAdapter(categories,activity);
         recyclerView.setAdapter(categoryAdapter);
 
